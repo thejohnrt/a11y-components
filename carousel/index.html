@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>A11Y Component: Carousel</title>
+  </head>
+  <body>
+    <header id="page-header">
+      <h1>A11Y Component: Carousel</h1>
+    </header>
+    <p>The carousel items are all displayed individually to retain structure/functionality for non-JavaScript users. Any classes applied to these elements will be removed when the carousel is created.</p>
+    <p id="activation-notice" aria-live="polite">Use the <em>Generate Carousels</em> button to create the carousel. Three seconds after being clicked, focus will be moved to the carousel.</em></p>
+    <button id="generator-button" type="button" onclick="generateCarousels('.a11y-carousel'); activate();">Generate Carousels</button>
+    <section class="a11y-carousel" aria-label="Example" tabindex="-1">
+      <div class="a11y-carousel__items">
+        <img src="./images/marius-spita-_ocWaLL7QPI-unsplash.jpg" alt="A hillside view of the water in Howth, Dublin, Ireland">
+        <img src="./images/marius-spita-AXucuglQfIM-unsplash.jpg" alt="A front-on view of a yellow bus in the street">
+        <img src="./images/marius-spita-dJdE9N7cKRU-unsplash.jpg" alt="A small lighthouse on a rocky coast">
+        <img src="./images/marius-spita-PfX958gY5I0-unsplash.jpg" alt="Boats sitting at a pier">
+        <img src="./images/marius-spita-y1O5lemSIdI-unsplash.jpg" alt="People dining outside in a Dublin alleyway">
+      </div>
+    </section>
+    <script src="./carousel.js" charset="utf-8"></script>
+    <footer>
+      <p>Photos by <a href="https://unsplash.com/@mariusspita?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marius Spita</a> on <a href="https://unsplash.com/about">Unsplash</a>
+  </p>
+    </footer>
+  </body>
+</html>

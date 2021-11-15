@@ -1,0 +1,31 @@
+.a11y-carousel {
+	width: 25em; /* height is set in `.a11y-carousel__items` */
+	position: relative;
+	display: block;
+  text-align: center;
+	box-sizing: border-box;
+}
+
+.a11y-carousel > * {
+	box-sizing: inherit;
+}
+
+.a11y-carousel__items {
+	height: 25em; /* width is set in `.a11y-carousel` */
+	width: inherit;
+}
+
+.a11y-carousel__item {
+	height: inherit;
+	width: inherit;
+	display: none;
+}
+
+.a11y-carousel__item.active {
+	display: block;
+}
+
+img.a11y-carousel__item {
+	object-fit: contain;
+	object-position: center;
+}
