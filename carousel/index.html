@@ -10,7 +10,7 @@
     </header>
     <p>The carousel items are all displayed individually to retain structure/functionality for non-JavaScript users. Any classes applied to these elements will be removed when the carousel is created.</p>
     <p id="activation-notice" aria-live="polite">Use the <em>Generate Carousels</em> button to create the carousel. Three seconds after being clicked, focus will be moved to the carousel.</em></p>
-    <button id="generator-button" type="button" onclick="generateCarousels('.a11y-carousel'); activate();">Generate Carousels</button>
+    <button id="generator-button" type="button">Generate Carousels</button>
     <section class="a11y-carousel" aria-label="Example" tabindex="-1">
       <div class="a11y-carousel__items">
         <img src="./images/marius-spita-_ocWaLL7QPI-unsplash.jpg" alt="A hillside view of the water in Howth, Dublin, Ireland">
@@ -25,5 +25,21 @@
       <p>Photos by <a href="https://unsplash.com/@mariusspita?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Marius Spita</a> on <a href="https://unsplash.com/about">Unsplash</a>
   </p>
     </footer>
+    <script type="text/javascript">
+    var options = {
+      carouselNames: [],
+      indicator: {
+        type: 'arrows',
+        labels: false,
+        location: 'after'
+      },
+      loop: false,
+      cssPath: "."
+    };
+      document.getElementById('generator-button').addEventListener('click', function() {
+        generateCarousels('.a11y-carousel', options);
+        activate();
+      });
+    </script>
   </body>
 </html>
